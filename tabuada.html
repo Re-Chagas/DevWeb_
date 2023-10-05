@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+
+        function Eqc_Of_User() {
+            const SelectedNumber = document.getElementById("UserNumber").value;
+            let table = []
+
+            for ( i = 1 ; i <= 10 ; i++) {
+               const calc = SelectedNumber * i; 
+                table.push(`${i} x ${SelectedNumber} = ${calc}`)
+                let result = document.getElementById(`UserMultiplication`).innerHTML = `${table.join("<br>")}`;
+            }
+
+        }
+
+
+    </script>
+
+    <style>
+
+    </style>
+
+</head>
+<body>
+
+    <div class="tudo">
+
+        <form>
+
+            <input placeholder="insira um numero" type="number" name="UserNumber" id="UserNumber" oninput="Eqc_Of_User()">
+
+            <div id="UserMultiplication">
+
+
+
+            </div>
+
+        </form>
+
+    </div>
+    
+</body>
+</html>
